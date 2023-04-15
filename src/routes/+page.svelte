@@ -32,7 +32,12 @@
 
   <!-- Array input -->
   <div class="flex">
-    <button on:click={() => (arr = [...arr, ++arr.length])}>add</button>
+    <button
+      on:click={() => {
+        arr.push(arr.length + 1)
+        arr = arr
+        // arr[arr.length] = arr.length + 1
+      }}>add</button>
     <h1 class="mx">{arr}</h1>
   </div>
 
